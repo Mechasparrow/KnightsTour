@@ -1096,6 +1096,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &687643296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687643297}
+  m_Layer: 0
+  m_Name: Start (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &687643297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687643296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.79, y: 1.755827, z: 6.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694680398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2f0b3e9497e5bd143a7a5067d9003784, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8719087
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2f0b3e9497e5bd143a7a5067d9003784, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1659,7 +1689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2f0b3e9497e5bd143a7a5067d9003784, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2f0b3e9497e5bd143a7a5067d9003784, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1693,7 +1723,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 001d513afe33af644bd6dafec261c0d4, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 9500000, guid: 2f0b3e9497e5bd143a7a5067d9003784, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9fb12b681d84f1742a42d47bdb35f461, type: 2}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 2f0b3e9497e5bd143a7a5067d9003784, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f0b3e9497e5bd143a7a5067d9003784, type: 3}
 --- !u!4 &1270096336 stripped
 Transform:
@@ -1965,6 +2000,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!1 &1553708416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1553708417}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1553708417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553708416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.79, y: 1.755827, z: 9.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1595879837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 2f0b3e9497e5bd143a7a5067d9003784,
+    type: 3}
+  m_PrefabInstance: {fileID: 1270096335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1595879838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595879837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e12afcabf590a4c88382070358aba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  moves:
+  - {x: 3, y: 0, z: 6}
+  - {x: -6, y: 0, z: 3}
+  - {x: -3, y: 0, z: -6}
+  - {x: 3, y: 0, z: -6}
+  - {x: -6, y: 0, z: 3}
+  - {x: 6, y: 0, z: 3}
+  - {x: 3, y: 0, z: -6}
+  - {x: -6, y: 0, z: 3}
+  knightMarker: {fileID: 1072975530334600117, guid: 8378f5f1ef1013e46a8642aa4e2bfe9e,
+    type: 3}
 --- !u!1 &1604621268
 GameObject:
   m_ObjectHideFlags: 0
