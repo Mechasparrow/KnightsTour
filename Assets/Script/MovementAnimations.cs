@@ -25,11 +25,61 @@ public class MovementAnimations : MonoBehaviour
     //Knight Marker
     public GameObject knightMarker;
 
+    //CSV path file
+    public TextAsset pathCSV;
+
     void Start()
     {
+        parseCSV();
+
         Vector3 firstMove = moves[currentMoveIdx];
 
         initJourney(transform.position + firstMove);
+    }
+
+    void parseCSV()
+    {
+        string csvContents = pathCSV.ToString();
+        string[] rows = csvContents.Split('\n');
+
+        Vector2 previousPosition = Vector2.zero;
+        List<Vector2> diffVectors = new List<Vector2>();
+        
+        bool firstRow = true;
+
+        foreach (string row in rows)
+        {
+            string[] dimensions = row.Split(',');
+            Vector2 numericDimensions = new Vector2(int.Parse(dimensions[0]), int.Parse(dimensions[1]));
+            Vector2 diffVector = new Vector2();
+
+            if (firstRow)
+            {
+                previousPosition = numericDimensions;
+                diffVector = Vector2.zero;
+                firstRow = false;
+            }else
+            {
+                diffVector = numericDimensions - previousPosition;
+                previousPosition = numericDimensions;
+            }
+            
+            diffVectors.Add(diffVector);
+
+        }
+
+        List<Vector3> moves = new List<Vector3>();
+
+        foreach (Vector2 diffVector in diffVectors)
+        {
+            Vector3 move = new Vector3(diffVector.x * 3.0f, 0, diffVector.y * 3.0f);
+            moves.Add(move);
+            
+            
+        }
+
+        this.moves = moves;
+
     }
 
     // Subroutine for initialization knight movement animation
